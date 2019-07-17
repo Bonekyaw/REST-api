@@ -17,7 +17,13 @@ use Illuminate\Http\Request;
 //     return $request->user();
 // });
 Route::post('register', 'API\RegisterController@register');
+// Route::post('login', 'API\RegisterController@login');
 
 Route::middleware('auth:api')->group( function () {
 	Route::resource('products', 'API\ProductController');
 });
+// Route::post('login', 'API\UserController@login');
+// Route::post('register', 'API\UserController@register');
+// Route::group(['middleware' => 'auth:api'], function(){
+// 	Route::post('details', 'API\UserController@details');
+// });

@@ -11,3 +11,29 @@ Client secret: gYXFqb3tp8skiCNJNsQJBzuimd4cAIMDGVpwS50Y
 Password grant client created successfully.
 Client ID: 2
 Client secret: 6leSDiipNW9MGN74GPOVAMkYjqFWgazoOVlIKwQl
+-----------------------
+
+Here is Routes URL with Verb:
+
+1) Login: Verb:GET, URL:http://localhost:8000/oauth/token
+
+2) Register: Verb:GET, URL:http://localhost:8000/api/register
+
+3) List: Verb:GET, URL:http://localhost:8000/api/products
+
+4) Create: Verb:POST, URL:http://localhost:8000/api/products
+
+5) Show: Verb:GET, URL:http://localhost:8000/api/products/{id}
+
+6) Update: Verb:PUT, URL:http://localhost:8000/api/products/{id}
+
+7) Delete: Verb:DELETE, URL:http://localhost:8000/api/products/{id}
+-------------------------
+make sure in details api we will use following headers as listed bellow:
+'headers' => [
+
+    'Accept' => 'application/json',
+
+    'Authorization' => 'Bearer '.$accessToken,
+
+]
