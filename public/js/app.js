@@ -1856,7 +1856,11 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   mounted: function mounted() {
-    this.name = 'Behrang No';
+    var _this = this;
+
+    axios.get('/api/users').then(function (response) {
+      _this.name = response.data.name;
+    });
   }
 });
 

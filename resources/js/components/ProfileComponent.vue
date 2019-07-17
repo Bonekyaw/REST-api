@@ -19,7 +19,10 @@
         },
 
         mounted() {
-            this.name = 'Behrang No';
+            axios.get('/api/users')
+                .then(response => {
+                this.name = response.data.name;
+            });
         }
 
     }
