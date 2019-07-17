@@ -28,6 +28,10 @@ Route::middleware('auth:api')->group( function () {
 // 	Route::post('details', 'API\UserController@details');
 // });
 
-Route::get('/users', function (Request $request) {
-    return response()->json(['name' => 'Behrang No']);
+// Route::get('/users', function (Request $request) {
+//     return response()->json(['name' => 'Behrang No']);
+// });
+
+Route::middleware('auth:api')->get('/users', function (Request $request){
+    return response()->json(['name' => Auth::User()->name]);
 });
