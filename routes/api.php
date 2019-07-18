@@ -37,12 +37,12 @@ Route::middleware('auth:api')->get('/users', function (Request $request){
 });
 
 Route::prefix('v1')->group(function(){
-    Route::apiResource('/person', 'Api\v1\PersonController')
+    Route::apiResource('/person', 'API\v1\PersonController')
         ->only(['show','destroy','update','store']);
-    Route::apiResource('/people', 'Api\v1\PersonController')
+    Route::apiResource('/people', 'API\v1\PersonController')
         ->only('index');
 });
 Route::prefix('v2')->group(function(){
-    Route::apiResource('/person', 'Api\v2\PersonController')
+    Route::apiResource('/person', 'API\v2\PersonController')
         ->only('show');
 });
